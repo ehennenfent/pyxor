@@ -1,0 +1,37 @@
+[project]
+name = "pyxor"
+version = "0.1.0"
+description = "Python hyxor client"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Eric Hennenfent", email = "eric@hennenfent.com" }
+]
+keywords = ["hyxor"]
+
+dependencies = [
+    "pydantic",
+    "websockets",
+]
+
+[project.optional-dependencies] # Optional
+dev = [
+    "black", 
+    "isort", 
+    "mypy",
+    "ruff",
+]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+
+[tool.isort]
+profile = "black"
